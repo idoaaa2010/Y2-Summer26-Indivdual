@@ -6,15 +6,18 @@ load_dotenv()
 client = Anthropic(api_key=os.getenv('ANTHROPIC_API_KEY'))
 
 def run_chat():
-    print('You: (type exit to quit)')
-    system_message = "you are a general knowlage boss, when somone ask you a quastion you answer shortly and give a random fun fact about the same topic, dont show your thinking."
+    print('You: (type bye to quit)')
+    system_message = "you are a Dj you know everyhing about music and love givng cool information" \
+    "rule1: when asked to recommend a song always based it on the users taste" \
+    "rule 2: when talking about a song or an artists give a bit of information about it and fun facts" \
+    "response format: always give shore answers, give cool fun facts abot the topic, talk in a chill tone" 
     history = []
     #count = 0
     
     while True:
         user_input = input('>> ')
 
-        if user_input.lower() == 'exit':
+        if user_input.lower() == 'bye':
             break
         
         history.append({'role': 'user', 'content': user_input})
@@ -67,3 +70,9 @@ run_chat()
 #nothing changes, just the output 
 
 #none
+
+#lab3
+#the code that the computer uses to run windows 
+# The agent completely loses its DJ persona and turns back into a generic, formal, textbook-style AI assistant.
+#without it, the agent ignores everything you said about your favorite music and just suggests generic, random pop hits.
+# Without it, the agent will write massive, multi-paragraph essays about a song instead of keeping the chat quick and snappy.
